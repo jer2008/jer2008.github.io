@@ -16,12 +16,12 @@
   <meta name="author" content="Jer">
   <meta name="keywords" content="">
   
-    <meta name="description" content="散列（Hash）表 基本概念  基本思想：记录的储存位置与关键字之间存在对应关系 对应关系-hash函数 Address(i) &#x3D; H(key) 根据关键字函数映射  散列表的查找 123根据散列表函数 H(key)&#x3D;k查找key&#x3D;9 ，则访问H(9)&#x3D;9号位置 ，若内容为根据散列表函数 H(key)&#x3D;k查找key&#x3D;9 ，则访问H(9)&#x3D;9号位置 ，若内容为9则成功；若查不到，则返">
+    <meta name="description" content="散列（Hash）表 基本概念  基本思想：记录的储存位置与关键字之间存在对应关系 对应关系-hash函数 Address(i) &#x3D; H(key) 根据关键字函数映射  散列表的查找 123根据散列表函数 H(key)&#x3D;k查找key&#x3D;9 ，则访问H(9)&#x3D;9号位置 ，若内容为9则成功；若查不到，则返回一个特殊值 ，如空指针或空记录。 正题  数值的哈希 Hash函数的作用就是">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hash表">
 <meta property="og:url" content="http://jer2008.github.io/2022/11/09/Hash%E8%A1%A8/index.html">
 <meta property="og:site_name" content="Jer&#39;s blog">
-<meta property="og:description" content="散列（Hash）表 基本概念  基本思想：记录的储存位置与关键字之间存在对应关系 对应关系-hash函数 Address(i) &#x3D; H(key) 根据关键字函数映射  散列表的查找 123根据散列表函数 H(key)&#x3D;k查找key&#x3D;9 ，则访问H(9)&#x3D;9号位置 ，若内容为根据散列表函数 H(key)&#x3D;k查找key&#x3D;9 ，则访问H(9)&#x3D;9号位置 ，若内容为9则成功；若查不到，则返">
+<meta property="og:description" content="散列（Hash）表 基本概念  基本思想：记录的储存位置与关键字之间存在对应关系 对应关系-hash函数 Address(i) &#x3D; H(key) 根据关键字函数映射  散列表的查找 123根据散列表函数 H(key)&#x3D;k查找key&#x3D;9 ，则访问H(9)&#x3D;9号位置 ，若内容为9则成功；若查不到，则返回一个特殊值 ，如空指针或空记录。 正题  数值的哈希 Hash函数的作用就是">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-11-09T11:31:21.000Z">
 <meta property="article:modified_time" content="2022-11-09T11:31:46.163Z">
@@ -194,7 +194,7 @@ mjx-container[display="true"] {
 mjx-container[display="true"] + br {
   display: none;
 }
-</style><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+</style></head>
 
 
 <body>
@@ -332,7 +332,7 @@ mjx-container[display="true"] + br {
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          856 字
+          816 字
         
       </span>
     
@@ -343,7 +343,7 @@ mjx-container[display="true"] + br {
         
         
         
-          8 分钟
+          7 分钟
         
       </span>
     
@@ -394,7 +394,7 @@ mjx-container[display="true"] + br {
 <li><strong>Address(i) = H(key) 根据关键字函数映射</strong></li>
 </ul>
 <h2 id="散列表的查找">散列表的查找</h2>
-<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre class=" language-hljs abnf">根据散列表函数 H(key)<span class="hljs-operator">=</span>k<br>查找key<span class="hljs-operator">=</span><span class="hljs-number">9</span> ，则访问H(<span class="hljs-number">9</span>)<span class="hljs-operator">=</span><span class="hljs-number">9</span>号位置 ，若内容为<span class="hljs-number"><code class="language-hljs abnf">根据散列表函数 H(key)<span class="hljs-operator">=</span>k<br>查找key<span class="hljs-operator">=</span><span class="hljs-number">9</span> ，则访问H(<span class="hljs-number">9</span>)<span class="hljs-operator">=</span><span class="hljs-number">9</span>号位置 ，若内容为<span class="hljs-number">9</span>则成功；<br>若查不到，则返回一个特殊值 ，如空指针或空记录。<br></code></pre></td></tr></table></figure>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs abnf">根据散列表函数 H(key)<span class="hljs-operator">=</span>k<br>查找key<span class="hljs-operator">=</span><span class="hljs-number">9</span> ，则访问H(<span class="hljs-number">9</span>)<span class="hljs-operator">=</span><span class="hljs-number">9</span>号位置 ，若内容为<span class="hljs-number">9</span>则成功；<br>若查不到，则返回一个特殊值 ，如空指针或空记录。<br></code></pre></td></tr></table></figure>
 <h2 id="正题">正题</h2>
 <ol type="1">
 <li><p>数值的哈希</p>
