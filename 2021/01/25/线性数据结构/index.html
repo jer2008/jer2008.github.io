@@ -1,103 +1,148 @@
-
-
-<!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
-
-
-
-<head>
-  <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
-  <link rel="icon" href="/img/fluid.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="Jer">
-  <meta name="keywords" content="">
-  
-    <meta name="description" content="线性数据结构     数据结构 优点 缺点     数组 插入快 查找慢 ，删除慢 ，大小固定只能存储单一元素   有序数组 比无序数组查询快 插入慢 ，删除慢 ，大小固定只能存储单一元素   栈 提供后进先出的存储方式 存储其他项慢   队列 提供先进先出的存储方式 存储其他项   链表 插入快 ，删除快 查找慢">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>线性数据结构 | Jer's blog</title><meta name="author" content="Jer"><meta name="copyright" content="Jer"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="线性数据结构         数据结构 优点 缺点     数组 插入快 查找慢 ，删除慢 ，大小固定只能存储单一元素   有序数组 比无序数组查询快 插入慢 ，删除慢 ，大小固定只能存储单一元素   栈 提供后进先出的存储方式 存储其他项慢   队列 提供先进先出的存储方式 存储其他项   链表 插入快 ，删除快 查">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线性数据结构">
 <meta property="og:url" content="http://jer2008.github.io/2021/01/25/%E7%BA%BF%E6%80%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.html">
 <meta property="og:site_name" content="Jer&#39;s blog">
-<meta property="og:description" content="线性数据结构     数据结构 优点 缺点     数组 插入快 查找慢 ，删除慢 ，大小固定只能存储单一元素   有序数组 比无序数组查询快 插入慢 ，删除慢 ，大小固定只能存储单一元素   栈 提供后进先出的存储方式 存储其他项慢   队列 提供先进先出的存储方式 存储其他项   链表 插入快 ，删除快 查找慢">
+<meta property="og:description" content="线性数据结构         数据结构 优点 缺点     数组 插入快 查找慢 ，删除慢 ，大小固定只能存储单一元素   有序数组 比无序数组查询快 插入慢 ，删除慢 ，大小固定只能存储单一元素   栈 提供后进先出的存储方式 存储其他项慢   队列 提供先进先出的存储方式 存储其他项   链表 插入快 ，删除快 查">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://visualgo.net/img/gif/heap.gif">
-<meta property="og:image" content="https://visualgo.net/img/gif/list.gif">
-<meta property="og:image" content="https://visualgo.net/img/gif/fenwicktree.gif">
-<meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/3zeqar6j.png">
-<meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/xp7kzfng.png">
-<meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/23w6egiq.png">
-<meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/lcpmgm9z.png">
-<meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/muhm9a4d.png">
-<meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/wn1vz0y9.png">
+<meta property="og:image" content="http://jer2008.github.io/img/1.jpg">
 <meta property="article:published_time" content="2021-01-25T07:33:50.000Z">
-<meta property="article:modified_time" content="2022-11-13T03:15:40.312Z">
+<meta property="article:modified_time" content="2022-11-14T13:49:51.082Z">
 <meta property="article:author" content="Jer">
 <meta property="article:tag" content="数据结构">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://visualgo.net/img/gif/heap.gif">
-  
-  
-  
-  <title>线性数据结构 - Jer&#39;s blog</title>
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
-
-
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-<!-- Do not modify the link that theme dependent icons -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
-  
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
-  
-
-
-
-  
-<link rel="stylesheet" href="/css/div/shubiao.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"jer2008.github.io","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
-
-    if (CONFIG.web_analytics.follow_dnt) {
-      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
-      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://jer2008.github.io/img/1.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://jer2008.github.io/2021/01/25/%E7%BA%BF%E6%80%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
     }
-  </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
-  
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '线性数据结构',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-11-14 21:49:51'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
   
-<meta name="generator" content="Hexo 5.4.2"><style>mjx-container[jax="SVG"] {
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"> <script src="/live2d-widget/autoload.js"></script><meta name="generator" content="Hexo 6.3.0"><style>mjx-container[jax="SVG"] {
   direction: ltr;
 }
 
@@ -209,212 +254,13 @@ mjx-container[display="true"] {
 mjx-container[display="true"] + br {
   display: none;
 }
-</style></head>
-
-
-<body>
-  
-
-  <header>
-
-    <!--动态线条背景-->
-<script type="text/javascript"
-color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-</script>
-
-    <!--浏览器搞笑标题-->
-    <script type="text/javascript" src="\js\FunnyTitle.js"></script>
-
-    <script type="text/javascript" src="/love.js"></script>
-    
-
-<div class="header-inner" style="height: 70vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      <strong>Jer&#39;s Blog</strong>
-    </a>
-
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
-            </a>
-          </li>
-          
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
-
-  
-
-<div id="banner" class="banner" parallax=true
-     style="background: url('/img/1.jpg') no-repeat center center; background-size: cover;">
-  <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-      <div class="banner-text text-center fade-in-up">
-        <div class="h2">
-          
-            <span id="subtitle" data-typed-text="线性数据结构"></span>
-          
-        </div>
-
-        
-          
-  <div class="mt-3">
-    
-    
-      <span class="post-meta">
-        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2021-01-25 15:33" pubdate>
-          2021年1月25日 下午
-        </time>
-      </span>
-    
-  </div>
-
-  <div class="mt-1">
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-chart"></i>
-        
-          2.6k 字
-        
-      </span>
-    
-
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-clock-fill"></i>
-        
-        
-        
-          22 分钟
-        
-      </span>
-    
-
-    
-    
-  </div>
-
-
-        
-      </div>
-
-      
-    </div>
-  </div>
-</div>
-
-</div>
-
-
-  </header>
-
-  <main>
-
-    
-      
-
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-
-    </div>
-
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div id="board">
-          <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">线性数据结构</h1>
-            
-            
-              <div class="markdown-body">
-                
-                <h1 id="线性数据结构">线性数据结构</h1>
+</style></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.luogu.com.cn/upload/usericon/368723.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/1.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Jer's blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">线性数据结构</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-01-25T07:33:50.000Z" title="发表于 2021-01-25 15:33:50">2021-01-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-11-14T13:49:51.082Z" title="更新于 2022-11-14 21:49:51">2022-11-14</time></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="线性数据结构">线性数据结构</h1>
 <table>
-
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: center;">数据结构</th>
@@ -485,23 +331,23 @@ color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com
 </tbody>
 </table>
 <p>二叉堆</p>
-<p><img src="https://visualgo.net/img/gif/heap.gif" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://visualgo.net/img/gif/heap.gif"></p>
 <p>链表</p>
-<p><img src="https://visualgo.net/img/gif/list.gif" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://visualgo.net/img/gif/list.gif"></p>
 <p>树状数组</p>
-<p><img src="https://visualgo.net/img/gif/fenwicktree.gif" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://visualgo.net/img/gif/fenwicktree.gif"></p>
 <ul>
 <li><h2 id="指针">指针</h2></li>
 </ul>
 <h3 id="指针变量int-p-与普通变量int-a的关系">1. 指针变量（int *p)
 与普通变量（int a)的关系</h3>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs cpp">p ------ &amp;a <span class="hljs-comment">//&amp;为取地址运算符</span><br>*p ------ a <span class="hljs-comment">//*为间接运算符</span><br>*p=<span class="hljs-number">3</span> ------ a=<span class="hljs-number">3</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p ------ &amp;a <span class="comment">//&amp;为取地址运算符</span></span><br><span class="line">*p ------ a <span class="comment">//*为间接运算符</span></span><br><span class="line">*p=<span class="number">3</span> ------ a=<span class="number">3</span></span><br></pre></td></tr></table></figure>
 <h3 id="指针变量定义">2. 指针变量定义</h3>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">int</span> *p=<span class="hljs-literal">NULL</span>;<br></code></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> *p=<span class="literal">NULL</span>;</span><br></pre></td></tr></table></figure>
 <p>定义了一个指针p ,p指向一个内存空间
 ，里面存放着一个内存地址。现在赋值为NULL(为0 ，表示特殊的空地址）。</p>
 <h3 id="给指针变量p赋值">3. 给指针变量p赋值</h3>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">int</span> a=<span class="hljs-number">3</span>;<br>p=&amp;a<br></code></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a=<span class="number">3</span>;</span><br><span class="line">p=&amp;a</span><br></pre></td></tr></table></figure>
 <p>即把a变量的内存地址给了p</p>
 <p>*p的值为3 ，p为地址</p>
 <h3 id="指针变量初始化">4. 指针变量初始化</h3>
@@ -533,420 +379,40 @@ color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com
 </table>
 <h3 id="指向结构体变量的指针">5. 指向结构体变量的指针</h3>
 <p><strong>一个结构体变量的指针就是该变量所占据的内存段的起始地址。可以设一个指针变量，用来指向一个结构体变量，此时，该指针变量的值是结构体变量的起始位置。</strong></p>
-<p><strong>使用指针变量访问结构体成员示例</strong> <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstdio&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">student</span>{<br>	string name;<br>	<span class="hljs-type">int</span> age;<br>	<span class="hljs-type">int</span> fx;<br>}; <br>student x={<span class="hljs-string">"xiaoming"</span> ,<span class="hljs-number">13</span> ,<span class="hljs-number">100</span>};<br>student *p;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>{<br>	p=&amp;x;<br>	cout &lt;&lt; x.name &lt;&lt; endl;<br>	cout &lt;&lt; (*p).age &lt;&lt; endl;<br>	cout &lt;&lt; p-&gt;fx &lt;&lt; endl;<br>}<br></code></pre></td></tr></table></figure>
+<p><strong>使用指针变量访问结构体成员示例</strong> <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">student</span>{</span><br><span class="line">	string name;</span><br><span class="line">	<span class="type">int</span> age;</span><br><span class="line">	<span class="type">int</span> fx;</span><br><span class="line">}; </span><br><span class="line">student x={<span class="string">"xiaoming"</span> ,<span class="number">13</span> ,<span class="number">100</span>};</span><br><span class="line">student *p;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	p=&amp;x;</span><br><span class="line">	cout &lt;&lt; x.name &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; (*p).age &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; p-&gt;fx &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 输出</p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">xiaoming<br><span class="hljs-number">13</span><br><span class="hljs-number">100</span><br><br><span class="hljs-comment">--------------------------------</span><br>Process exited <span class="hljs-keyword">after</span> <span class="hljs-number">0.05083</span> <span class="hljs-built_in">seconds</span> <span class="hljs-keyword">with</span> <span class="hljs-literal">return</span> <span class="hljs-built_in">value</span> <span class="hljs-number">0</span><br>请按任意键继续. . .<br><br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">xiaoming</span><br><span class="line">13</span><br><span class="line">100</span><br><span class="line"></span><br><span class="line">--------------------------------</span><br><span class="line">Process exited after 0.05083 seconds with return value 0</span><br><span class="line">请按任意键继续. . .</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>注：p-&gt;age 相当于 x.age。 ## 链表 ### 单链表 #### 1.
-<strong>单链表结构体定义</strong> <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">name</span>{<br>	(类型）data<br>	<span class="hljs-keyword">struct</span> name *next;<br>    <span class="hljs-comment">//name为结构体名称 ，next指向下一个节点的指针</span><br>};<br></code></pre></td></tr></table></figure> #### 2.
-<strong>基本操作</strong> - <strong>初始化</strong> <figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs coq">/*<br>	| <span class="hljs-type">头指针L</span> | <span class="hljs-type">NULL</span> | <br><span class="hljs-type">*/</span><br><span class="hljs-type">L</span>=new name;<br>L-&gt;next=NULL;<br></code></pre></td></tr></table></figure></p>
+<strong>单链表结构体定义</strong> <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">name</span>{</span><br><span class="line">	(类型）data</span><br><span class="line">	<span class="keyword">struct</span> name *next;</span><br><span class="line">    <span class="comment">//name为结构体名称 ，next指向下一个节点的指针</span></span><br><span class="line">};</span><br></pre></td></tr></table></figure> #### 2.
+<strong>基本操作</strong> - <strong>初始化</strong> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">	| 头指针L | NULL | </span><br><span class="line">*/</span><br><span class="line">L=new name;</span><br><span class="line">L-&gt;next=NULL;</span><br></pre></td></tr></table></figure></p>
 <ul>
 <li>创建</li>
 </ul>
-<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/3zeqar6j.png" srcset="/img/loading.gif" lazyload> -
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/3zeqar6j.png"> -
 取值，查找</p>
-<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/xp7kzfng.png" srcset="/img/loading.gif" lazyload>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp">P=L-&gt;next;j=<span class="hljs-number">1</span>;<br>P=P-&gt;next;j=<span class="hljs-number">2</span>;<br></code></pre></td></tr></table></figure></p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/xp7kzfng.png">
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">P=L-&gt;next;j=<span class="number">1</span>;</span><br><span class="line">P=P-&gt;next;j=<span class="number">2</span>;</span><br></pre></td></tr></table></figure></p>
 <ul>
 <li>插入</li>
 </ul>
-<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/23w6egiq.png" srcset="/img/loading.gif" lazyload> -
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/23w6egiq.png"> -
 删除</p>
-<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/lcpmgm9z.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/lcpmgm9z.png"></p>
 <p><strong>相关代码</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;string&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> <span class="hljs-title class_">LNode</span> {<br>	<span class="hljs-type">int</span> data; <span class="hljs-comment">//结点的数据域</span><br>	<span class="hljs-keyword">struct</span> <span class="hljs-title class_">LNode</span> *next; <span class="hljs-comment">//结点的指针域</span><br>}LNode, *LinkList; <span class="hljs-comment">//LinkList为指向结构体LNode的指针类型</span><br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">CreateList_R</span><span class="hljs-params">(LinkList &amp;L)</span><span class="hljs-comment">//尾插法创建单链表</span></span><br><span class="hljs-function"></span>{<br>	<span class="hljs-comment">//输入n个元素的值，建立带表头结点的单链表L</span><br>	<span class="hljs-type">int</span> n;<br>	LinkList s, r;<br>	L=<span class="hljs-keyword">new</span> LNode;<br>	L-&gt;next=<span class="hljs-literal">NULL</span>; <span class="hljs-comment">//先建立一个带头结点的空链表</span><br>	r=L; <span class="hljs-comment">//尾指针r指向头结点</span><br>	cout &lt;&lt;<span class="hljs-string">"请输入元素个数n："</span> &lt;&lt;endl;<br>	cin&gt;&gt;n;<br>	cout &lt;&lt;<span class="hljs-string">"尾插法（正序）创建单链表..."</span> &lt;&lt;endl;<br>	<span class="hljs-keyword">while</span>(n--)<br>    {<br>		s=<span class="hljs-keyword">new</span> LNode;<span class="hljs-comment">//生成新结点</span><br>		cin&gt;&gt;s-&gt;data; <span class="hljs-comment">//输入元素值赋给新结点的数据域</span><br>		s-&gt;next=<span class="hljs-literal">NULL</span>;<br>		r-&gt;next=s;<span class="hljs-comment">//将新结点s插入尾结点r之后</span><br>		r=s;<span class="hljs-comment">//r指向新的尾结点s</span><br>	}<br>}<br><br><span class="hljs-function">LinkList <span class="hljs-title">findmiddle</span><span class="hljs-params">(LinkList L)</span></span><br><span class="hljs-function"></span>{<br>	LinkList p,q;<br>    p=L; <span class="hljs-comment">//p为快指针，初始时指向L</span><br>    q=L; <span class="hljs-comment">//q为慢指针，初始时指向L</span><br>    <span class="hljs-keyword">while</span>(p!=<span class="hljs-literal">NULL</span>&amp;&amp;p-&gt;next!=<span class="hljs-literal">NULL</span>)<br>    {<br>        p=p-&gt;next-&gt;next;<span class="hljs-comment">//p为快指针一次走两步；</span><br>        q=q-&gt;next; <span class="hljs-comment">//q为慢指针一次走一步</span><br>    }<br>    <span class="hljs-keyword">return</span> q;<span class="hljs-comment">//返回中间结点指针</span><br>}<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Listprint_L</span><span class="hljs-params">(LinkList L)</span> <span class="hljs-comment">//单链表的输出</span></span><br><span class="hljs-function"></span>{<br>    LinkList p;<br>    p=L-&gt;next;<br>    <span class="hljs-keyword">while</span> (p)<br>    {<br>        cout&lt;&lt;p-&gt;data&lt;&lt;<span class="hljs-string">"\t"</span>;<br>		p=p-&gt;next;<br>    }<br>    cout&lt;&lt;endl;<br>}<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>{<br>	LinkList L,mid;<br>	cout&lt;&lt;<span class="hljs-string">"创建单链表L:"</span>&lt;&lt;endl;<br>	<span class="hljs-built_in">CreateList_R</span>(L);<br>	cout&lt;&lt;<span class="hljs-string">"单链表数据为:"</span>&lt;&lt;endl;<br>	<span class="hljs-built_in">Listprint_L</span>(L);<br>	mid=<span class="hljs-built_in">findmiddle</span>(L);<br>	cout&lt;&lt;<span class="hljs-string">"单链表中间结点数据为："</span>&lt;&lt;mid-&gt;data&lt;&lt;endl;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>}<br><br></code></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> <span class="title class_">LNode</span> {</span><br><span class="line">	<span class="type">int</span> data; <span class="comment">//结点的数据域</span></span><br><span class="line">	<span class="keyword">struct</span> <span class="title class_">LNode</span> *next; <span class="comment">//结点的指针域</span></span><br><span class="line">}LNode, *LinkList; <span class="comment">//LinkList为指向结构体LNode的指针类型</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">CreateList_R</span><span class="params">(LinkList &amp;L)</span><span class="comment">//尾插法创建单链表</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="comment">//输入n个元素的值，建立带表头结点的单链表L</span></span><br><span class="line">	<span class="type">int</span> n;</span><br><span class="line">	LinkList s, r;</span><br><span class="line">	L=<span class="keyword">new</span> LNode;</span><br><span class="line">	L-&gt;next=<span class="literal">NULL</span>; <span class="comment">//先建立一个带头结点的空链表</span></span><br><span class="line">	r=L; <span class="comment">//尾指针r指向头结点</span></span><br><span class="line">	cout &lt;&lt;<span class="string">"请输入元素个数n："</span> &lt;&lt;endl;</span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line">	cout &lt;&lt;<span class="string">"尾插法（正序）创建单链表..."</span> &lt;&lt;endl;</span><br><span class="line">	<span class="keyword">while</span>(n--)</span><br><span class="line">    {</span><br><span class="line">		s=<span class="keyword">new</span> LNode;<span class="comment">//生成新结点</span></span><br><span class="line">		cin&gt;&gt;s-&gt;data; <span class="comment">//输入元素值赋给新结点的数据域</span></span><br><span class="line">		s-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">		r-&gt;next=s;<span class="comment">//将新结点s插入尾结点r之后</span></span><br><span class="line">		r=s;<span class="comment">//r指向新的尾结点s</span></span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function">LinkList <span class="title">findmiddle</span><span class="params">(LinkList L)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	LinkList p,q;</span><br><span class="line">    p=L; <span class="comment">//p为快指针，初始时指向L</span></span><br><span class="line">    q=L; <span class="comment">//q为慢指针，初始时指向L</span></span><br><span class="line">    <span class="keyword">while</span>(p!=<span class="literal">NULL</span>&amp;&amp;p-&gt;next!=<span class="literal">NULL</span>)</span><br><span class="line">    {</span><br><span class="line">        p=p-&gt;next-&gt;next;<span class="comment">//p为快指针一次走两步；</span></span><br><span class="line">        q=q-&gt;next; <span class="comment">//q为慢指针一次走一步</span></span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> q;<span class="comment">//返回中间结点指针</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Listprint_L</span><span class="params">(LinkList L)</span> <span class="comment">//单链表的输出</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    LinkList p;</span><br><span class="line">    p=L-&gt;next;</span><br><span class="line">    <span class="keyword">while</span> (p)</span><br><span class="line">    {</span><br><span class="line">        cout&lt;&lt;p-&gt;data&lt;&lt;<span class="string">"\t"</span>;</span><br><span class="line">		p=p-&gt;next;</span><br><span class="line">    }</span><br><span class="line">    cout&lt;&lt;endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	LinkList L,mid;</span><br><span class="line">	cout&lt;&lt;<span class="string">"创建单链表L:"</span>&lt;&lt;endl;</span><br><span class="line">	<span class="built_in">CreateList_R</span>(L);</span><br><span class="line">	cout&lt;&lt;<span class="string">"单链表数据为:"</span>&lt;&lt;endl;</span><br><span class="line">	<span class="built_in">Listprint_L</span>(L);</span><br><span class="line">	mid=<span class="built_in">findmiddle</span>(L);</span><br><span class="line">	cout&lt;&lt;<span class="string">"单链表中间结点数据为："</span>&lt;&lt;mid-&gt;data&lt;&lt;endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <h3 id="双向链表">双向链表</h3>
 <ul>
 <li>插入</li>
 </ul>
-<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/muhm9a4d.png" srcset="/img/loading.gif" lazyload>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs cpp">P-&gt;pior-&gt;next=s;<br>S-&gt;pior=P-&gt;pior;<br>S-&gt;next=p;<br>P-&gt;next=S;<br></code></pre></td></tr></table></figure></p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/muhm9a4d.png">
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">P-&gt;pior-&gt;next=s;</span><br><span class="line">S-&gt;pior=P-&gt;pior;</span><br><span class="line">S-&gt;next=p;</span><br><span class="line">P-&gt;next=S;</span><br></pre></td></tr></table></figure></p>
 <ul>
 <li>删除</li>
 </ul>
-<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/wn1vz0y9.png" srcset="/img/loading.gif" lazyload></p>
-
-                
-              </div>
-            
-            <hr/>
-            <div>
-              <div class="post-metas my-3">
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">#数据结构</a>
-      
-    </div>
-  
-</div>
-
-
-              
-  
-
-  <div class="license-box my-3">
-    <div class="license-title">
-      <div>线性数据结构</div>
-      <div>http://jer2008.github.io/2021/01/25/线性数据结构/</div>
-    </div>
-    <div class="license-meta">
-      
-        <div class="license-meta-item">
-          <div>作者</div>
-          <div>Jer</div>
-        </div>
-      
-      
-        <div class="license-meta-item license-meta-date">
-          <div>发布于</div>
-          <div>2021年1月25日</div>
-        </div>
-      
-      
-      
-        <div class="license-meta-item">
-          <div>许可协议</div>
-          <div>
-            
-              
-              
-                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                    <i class="iconfont icon-by"></i>
-                  </span>
-                </a>
-              
-            
-          </div>
-        </div>
-      
-    </div>
-    <div class="license-icon iconfont"></div>
-  </div>
-
-
-
-              
-                <div class="post-prevnext my-3">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/2021/01/27/Hash%E8%A1%A8/" title="Hash表">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Hash表</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/2020/12/27/%E6%8E%92%E5%BA%8F%E7%AC%94%E8%AE%B0/" title="排序笔记">
-                        <span class="hidden-mobile">排序笔记</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
-            </div>
-
-            
-  <article id="comments" lazyload>
-    
-  <script type="text/javascript">
-    Fluid.utils.loadComments('#comments', function() {
-      var light = 'github-light';
-      var dark = 'github-dark';
-      var schema = document.documentElement.getAttribute('data-user-color-scheme');
-      if (schema === 'dark') {
-        schema = dark;
-      } else {
-        schema = light;
-      }
-      window.UtterancesThemeLight = light;
-      window.UtterancesThemeDark = dark;
-      var s = document.createElement('script');
-      s.setAttribute('src', 'https://utteranc.es/client.js');
-      s.setAttribute('repo', 'jer2008/blogtalks');
-      s.setAttribute('issue-term', 'title');
-      
-      s.setAttribute('label', 'utterances');
-      
-      s.setAttribute('theme', schema);
-      s.setAttribute('crossorigin', 'anonymous');
-      document.getElementById('comments').appendChild(s);
-    })
-  </script>
-  <noscript>Please enable JavaScript to view the comments</noscript>
-
-
-  </article>
-
-
-          </article>
-        </div>
-      </div>
-    </div>
-
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-  <aside class="sidebar" style="margin-left: -1rem">
-    <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-
-
-  </aside>
-
-
-    </div>
-  </div>
-</div>
-
-
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-
-
-
-
-    
-
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
-
-    
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-    
-
-    
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-  
-    <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
-    </div>
-  
-  
-  
-  
-</div>
-
-  </footer>
-
-  <!-- Scripts -->
-  
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
-
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
-
-
-<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
-
-
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
-
-
-
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
-
-
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
-    var toc = jQuery('#toc');
-    if (toc.length === 0 || !window.tocbot) { return; }
-    var boardCtn = jQuery('#board-ctn');
-    var boardTop = boardCtn.offset().top;
-
-    window.tocbot.init(Object.assign({
-      tocSelector     : '#toc-body',
-      contentSelector : '.markdown-body',
-      linkClass       : 'tocbot-link',
-      activeLinkClass : 'tocbot-active-link',
-      listClass       : 'tocbot-list',
-      isCollapsedClass: 'tocbot-is-collapsed',
-      collapsibleClass: 'tocbot-is-collapsible',
-      scrollSmooth    : true,
-      includeTitleTags: true,
-      headingsOffset  : -boardTop,
-    }, CONFIG.toc));
-    if (toc.find('.toc-list-item').length > 0) {
-      toc.css('visibility', 'visible');
-    }
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('tocbot' in window) {
-        tocbot.refresh();
-        var toc = jQuery('#toc');
-        if (toc.length === 0 || !tocbot) {
-          return;
-        }
-        if (toc.find('.toc-list-item').length > 0) {
-          toc.css('visibility', 'visible');
-        }
-      }
-    });
-  });
-</script>
-
-
-  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
-
-  <script>Fluid.plugins.codeWidget();</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
-    window.anchors.options = {
-      placement: CONFIG.anchorjs.placement,
-      visible  : CONFIG.anchorjs.visible
-    };
-    if (CONFIG.anchorjs.icon) {
-      window.anchors.options.icon = CONFIG.anchorjs.icon;
-    }
-    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-    var res = [];
-    for (var item of el) {
-      res.push('.markdown-body > ' + item.trim());
-    }
-    if (CONFIG.anchorjs.placement === 'left') {
-      window.anchors.options.class = 'anchorjs-link-left';
-    }
-    window.anchors.add(res.join(', '));
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('anchors' in window) {
-        anchors.removeAll();
-        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-        var res = [];
-        for (var item of el) {
-          res.push('.markdown-body > ' + item.trim());
-        }
-        if (CONFIG.anchorjs.placement === 'left') {
-          anchors.options.class = 'anchorjs-link-left';
-        }
-        anchors.add(res.join(', '));
-      }
-    });
-  });
-</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
-    Fluid.plugins.fancyBox();
-  });
-</script>
-
-
-  <script>Fluid.plugins.imageCaption();</script>
-
-  <script  src="/js/local-search.js" ></script>
-
-
-
-
-  
-<script src="/js/div/timeDate.js"></script>
-<script src="/js/div/xiaoxuehua.js"></script>
-<script src="//cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-<script src="//cdn.jsdelivr.net/gh/metowolf/Metingjs@1.2/dist/Meting.min.js"></script>
-
-
-
-<!-- 主题的启动项，将它保持在最底部 -->
-<!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
-
-
-  
-
-  <noscript>
-    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
-  </noscript>
-
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
-</html>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/wn1vz0y9.png"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://jer2008.github.io">Jer</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://jer2008.github.io/2021/01/25/%E7%BA%BF%E6%80%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">http://jer2008.github.io/2021/01/25/%E7%BA%BF%E6%80%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://jer2008.github.io" target="_blank">Jer's blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></div><div class="post_share"></div></div><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/01/27/Hash%E8%A1%A8/" title="Hash表"><img class="cover" src="/img/1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-01-27</div><div class="title">Hash表</div></div></a></div><div><a href="/2021/01/30/%E5%8E%8B%E7%BC%A9%E5%82%A8%E5%AD%98/" title="压缩储存"><img class="cover" src="/img/1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-01-30</div><div class="title">压缩储存</div></div></a></div><div><a href="/2021/03/08/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91%E6%B5%85%E8%B0%88/" title="哈夫曼树浅谈"><img class="cover" src="/img/1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-08</div><div class="title">哈夫曼树浅谈</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.luogu.com.cn/upload/usericon/368723.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Jer</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/jer2008"><i class="fab fa-github"></i><span>Follow Me~</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">博客主题由fluid迁移到butterfly</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-number">1.</span> <span class="toc-text">线性数据结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E9%92%88"><span class="toc-number">1.1.</span> <span class="toc-text">指针</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E9%92%88%E5%8F%98%E9%87%8Fint-p-%E4%B8%8E%E6%99%AE%E9%80%9A%E5%8F%98%E9%87%8Fint-a%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 指针变量（int *p)
+与普通变量（int a)的关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E9%92%88%E5%8F%98%E9%87%8F%E5%AE%9A%E4%B9%89"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 指针变量定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%99%E6%8C%87%E9%92%88%E5%8F%98%E9%87%8Fp%E8%B5%8B%E5%80%BC"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. 给指针变量p赋值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E9%92%88%E5%8F%98%E9%87%8F%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.1.4.</span> <span class="toc-text">4. 指针变量初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E5%90%91%E7%BB%93%E6%9E%84%E4%BD%93%E5%8F%98%E9%87%8F%E7%9A%84%E6%8C%87%E9%92%88"><span class="toc-number">1.1.5.</span> <span class="toc-text">5. 指向结构体变量的指针</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8"><span class="toc-number">1.1.6.</span> <span class="toc-text">双向链表</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/11/14/hello-world/" title="Hello World">Hello World</a><time datetime="2022-11-14T12:36:56.992Z" title="发表于 2022-11-14 20:36:56">2022-11-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/11/12/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" title="Hexo博客搭建">Hexo博客搭建</a><time datetime="2022-11-12T14:01:57.000Z" title="发表于 2022-11-12 22:01:57">2022-11-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/09/30/NOIP-CSP%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" title="NOIP&amp;CSP注意事项">NOIP&amp;CSP注意事项</a><time datetime="2021-09-30T15:29:24.000Z" title="发表于 2021-09-30 23:29:24">2021-09-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/08/12/%E8%AF%8D%E5%85%B8/" title="词典">词典</a><time datetime="2021-08-12T06:26:48.000Z" title="发表于 2021-08-12 14:26:48">2021-08-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/06/11/chen-zhe%E7%BE%8E%E6%96%87/" title="chen_zhe美文">chen_zhe美文</a><time datetime="2021-06-11T11:51:59.000Z" title="发表于 2021-06-11 19:51:59">2021-06-11</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Jer</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script></div></body></html>
