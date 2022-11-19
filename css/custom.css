@@ -1,0 +1,23 @@
+@font-face{
+  font-family:'MaShanZheng-Regular' ;  /* 字体名自定义即可 */
+  src:url('/fonts/MaShanZheng-Regular.ttf'); /* 字体文件路径 */
+  font-display : swap;
+}
+@font-face{
+  font-family:'Lobster-Regular' ;  /* 字体名自定义即可 */
+  src:url('/fonts/Lobster-Regular.ttf'); /* 字体文件路径 */
+  font-display : swap;
+}
+
+h1#site-title {
+  font-family: 'Lobster-Regular', sans-serif;
+}
+
+h1#post-title {
+  font-family: 'MaShanZheng-Regular', sans-serif;
+}
+
+
+span#subtitle {
+  font-family: 'MaShanZheng-Regular', sans-serif;
+}
