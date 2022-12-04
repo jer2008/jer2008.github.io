@@ -1,6 +1,13 @@
-#home-top {
-  margin: 1rem auto 0;
-  padding: 0px 15px;
+#home_top {
   max-width: 1400px;
-  width: 100%;
+  margin: auto;
+  margin-top: 0.5rem;
+  padding: 0 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  #home_top {
+    padding: 0;
+    margin-top: 0;
+  }
 }
