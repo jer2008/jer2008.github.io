@@ -1,14 +1,8 @@
-
+/* home top */
 #home_top {
-  max-width: 1400px;
-  margin: auto;
-  margin-top: 0.5rem;
-  padding: 0 1.5rem;
-}
-
-@media screen and (max-width: 768px) {
-  #home_top {
-    padding: 0;
-    margin-top: 0;
-  }
+    max-width: 1300px;
+    width: 100%;
+    margin-top: .5rem;
+    padding: 0 15px;
+    margin: 0 auto;
 }

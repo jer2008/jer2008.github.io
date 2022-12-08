@@ -1,9 +1,5 @@
 .layout{
-  max-width:1400px;
-}
-.aside-content{
-    max-width:312px;
-    min-width:300px;
+  max-width:1300px;
 }
 #archive,#page,#category,#tag{
     width:100%;
