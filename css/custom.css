@@ -571,3 +571,19 @@ li.card-archive-list-item {
     left: 50%;
     transform: translate(-50%, -48px);
 }
+
+/* 夜间星空特效 */
+#universe {
+    display: block;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
