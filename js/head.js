@@ -1,4 +1,3 @@
-// 返回顶部 显示网页阅读进度
 window.onscroll = percent; // 执行函数
 // 页面百分比
 function percent() {
@@ -18,4 +17,4 @@ function percent() {
   result <= 99 || (result = 99), (btn.innerHTML = result);
 }
 
-document.getElementById("page-name").innerText = document.title.split(" | 安知鱼")[0];
+document.getElementById("page-name").innerText = document.title.split(" | jer")[0];
