@@ -7,3 +7,12 @@
 .page:not(.page.home) .aside-content{
     display: none;
 }
+/*友链适配*/
+.flink-list-item{
+    width:calc(100% / 4 - 15px)!important;
+}
+@media screen and (max-width: 1250px) {
+    .flink-list-item{
+        width:calc(100% / 3 - 15px)!important;
+    }
+}
