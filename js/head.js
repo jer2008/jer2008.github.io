@@ -1,3 +1,5 @@
+document.addEventListener('pjax:complete', percent);
+document.addEventListener('DOMContentLoaded', percent);
 window.onscroll = percent; // 执行函数
 // 页面百分比
 function percent() {
@@ -13,6 +15,8 @@ function percent() {
       ) - document.documentElement.clientHeight, // 整个网页高度 减去 可视高度
     result = Math.round((a / b) * 100), // 计算百分比
     btn = document.querySelector("#percent"); // 获取图标
+
+  document.getElementById("page-name").innerText = document.title.split(" | jer")[0];
 
   result <= 99 || (result = 99), (btn.innerHTML = result);
 }
