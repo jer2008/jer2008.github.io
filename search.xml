@@ -109,7 +109,7 @@
         <category>魔改</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -806,6 +806,462 @@
       </categories>
   </entry>
   <entry>
+    <title>标签外挂</title>
+    <url>/post/54667693.html</url>
+    <content><![CDATA[<p>转载自 <div class="tag link"><a class="link-card" title="糖果屋教程贴" href="https://akilar.top/posts/615e2dec/"><div class="left"><img src="https://npm.elemecdn.com/akilar-friends@latest/avatar/akilar.top.jpg"></div><div class="right"><p class="text">糖果屋教程贴</p><p class="url">https://akilar.top/posts/615e2dec/</p></div></a></div> 用来为自己日后写文章提供便利。</p>
+<h2 id="npm插件下载">npm插件下载</h2>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">npm</span> <span class="string">install</span> <span class="string">hexo-butterfly-tag-plugins-plus</span> <span class="string">--save</span></span><br></pre></td></tr></table></figure>
+<h2 id="配置">配置</h2>
+<p>在_config.yml中添加</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># tag-plugins-plus</span></span><br><span class="line"><span class="comment"># see https://akilar.top/posts/615e2dec/</span></span><br><span class="line"><span class="attr">tag_plugins:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment"># 开关</span></span><br><span class="line">  <span class="attr">priority:</span> <span class="number">5</span> <span class="comment">#过滤器优先权</span></span><br><span class="line">  <span class="attr">issues:</span> <span class="literal">false</span> <span class="comment">#issues标签依赖注入开关</span></span><br><span class="line">  <span class="attr">link:</span></span><br><span class="line">    <span class="attr">placeholder:</span> <span class="string">/img/link.png</span> <span class="comment">#link_card标签默认的图标图片</span></span><br><span class="line">  <span class="attr">CDN:</span></span><br><span class="line">    <span class="attr">anima:</span> <span class="string">https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css</span> <span class="comment">#动画标签anima的依赖</span></span><br><span class="line">    <span class="attr">jquery:</span> <span class="string">https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js</span> <span class="comment">#issues标签依赖</span></span><br><span class="line">    <span class="attr">issues:</span> <span class="string">https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/issues.js</span> <span class="comment">#issues标签依赖</span></span><br><span class="line">    <span class="attr">iconfont:</span> <span class="string">//at.alicdn.com/t/font_2032782_8d5kxvn09md.js</span> <span class="comment">#参看https://akilar.top/posts/d2ebecef/</span></span><br><span class="line">    <span class="attr">carousel:</span> <span class="string">https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js</span></span><br><span class="line">    <span class="attr">tag_plugins_css:</span> <span class="string">https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css</span></span><br></pre></td></tr></table></figure>
+<h2 id="行内文本样式-text">行内文本样式 text</h2>
+<div class="tabs" id="text"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#text-1">标签语法</button></li><li class="tab"><button type="button" data-href="#text-2">示例</button></li><li class="tab"><button type="button" data-href="#text-3">示例源码</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="text-1"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">{% u 文本内容 %}</span><br><span class="line">{% emp 文本内容 %}</span><br><span class="line">{% wavy 文本内容 %}</span><br><span class="line">{% del 文本内容 %}</span><br><span class="line">{% kbd 文本内容 %}</span><br><span class="line">{% psw 文本内容 %}</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-2"><ol type="1">
+<li>带 <u>下划线</u> 的文本</li>
+<li>带 <emp>着重号</emp> 的文本</li>
+<li>带 <wavy>波浪线</wavy> 的文本</li>
+<li>带 <del>删除线</del> 的文本</li>
+<li>键盘样式的文本 <kbd>command</kbd> + <kbd>D</kbd></li>
+<li>密码样式的文本：<psw>这里没有验证码</psw></li>
+</ol><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-3"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> 带 {% u 下划线 %} 的文本</span><br><span class="line"><span class="bullet">2.</span> 带 {% emp 着重号 %} 的文本</span><br><span class="line"><span class="bullet">3.</span> 带 {% wavy 波浪线 %} 的文本</span><br><span class="line"><span class="bullet">4.</span> 带 {% del 删除线 %} 的文本</span><br><span class="line"><span class="bullet">5.</span> 键盘样式的文本 {% kbd command %} + {% kbd D %}</span><br><span class="line"><span class="bullet">6.</span> 密码样式的文本：{% psw 这里没有验证码 %}</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h2 id="行内文本-span">行内文本 span</h2>
+<div class="tabs" id="text"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#text-1">标签语法</button></li><li class="tab"><button type="button" data-href="#text-2">配置参数</button></li><li class="tab"><button type="button" data-href="#text-3">示例</button></li><li class="tab"><button type="button" data-href="#text-4">示例源码</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="text-1"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">{% span 样式参数(参数以空格划分), 文本内容 %}</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-2"><ol type="1">
+<li>字体: logo, code</li>
+<li>颜色: red,yellow,green,cyan,blue,gray</li>
+<li>大小: small, h4, h3, h2, h1, large, huge, ultra</li>
+<li>对齐方向: left, center, right</li>
+</ol><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-3"><ul>
+<li>彩色文字 在一段话中方便插入各种颜色的标签，包括：<span class="p red">红色</span>、<span class="p yellow">黄色</span>、<span class="p green">绿色</span>、<span class="p cyan">青色</span>、<span class="p blue">蓝色</span>、<span class="p gray">灰色</span>。</li>
+<li>超大号文字 文档「开始」页面中的标题部分就是超大号文字。 <span class="p center logo large">Volantis</span> <span class="p center small">A Wonderful Theme for Hexo</span></li>
+</ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-4"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> 彩色文字</span><br><span class="line">在一段话中方便插入各种颜色的标签，包括：{% span red, 红色 %}、{% span yellow, 黄色 %}、{% span green, 绿色 %}、{% span cyan, 青色 %}、{% span blue, 蓝色 %}、{% span gray, 灰色 %}。</span><br><span class="line"><span class="bullet">-</span> 超大号文字</span><br><span class="line">文档「开始」页面中的标题部分就是超大号文字。</span><br><span class="line">{% span center logo large, Volantis %}</span><br><span class="line">{% span center small, A Wonderful Theme for Hexo %}</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h2 id="段落文本-p">段落文本 p</h2>
+<div class="tabs" id="text"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#text-1">标签语法</button></li><li class="tab"><button type="button" data-href="#text-2">配置参数</button></li><li class="tab"><button type="button" data-href="#text-3">示例</button></li><li class="tab"><button type="button" data-href="#text-4">示例源码</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="text-1"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">{% p 样式参数(参数以空格划分), 文本内容 %}</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-2"><ol type="1">
+<li>字体: logo, code</li>
+<li>颜色: red,yellow,green,cyan,blue,gray</li>
+<li>大小: small, h4, h3, h2, h1, large, huge, ultra</li>
+<li>对齐方向: left, center, right</li>
+</ol><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-3"><ul>
+<li>彩色文字 在一段话中方便插入各种颜色的标签，包括：
+<p class="p red">
+红色
+</p>
+、
+<p class="p yellow">
+黄色
+</p>
+、
+<p class="p green">
+绿色
+</p>
+、
+<p class="p cyan">
+青色
+</p>
+、
+<p class="p blue">
+蓝色
+</p>
+、
+<p class="p gray">
+灰色
+</p>
+。</li>
+<li>超大号文字 文档「开始」页面中的标题部分就是超大号文字。
+<p class="p center logo large">
+Volantis
+</p>
+<p class="p center small">
+A Wonderful Theme for Hexo
+</p></li>
+</ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-4"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> 彩色文字</span><br><span class="line">在一段话中方便插入各种颜色的标签，包括：{% p red, 红色 %}、{% p yellow, 黄色 %}、{% p green, 绿色 %}、{% p cyan, 青色 %}、{% p blue, 蓝色 %}、{% p gray, 灰色 %}。</span><br><span class="line"><span class="bullet">-</span> 超大号文字</span><br><span class="line">文档「开始」页面中的标题部分就是超大号文字。</span><br><span class="line">{% p center logo large, Volantis %}</span><br><span class="line">{% p center small, A Wonderful Theme for Hexo %}</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h2 id="上标标签-tip">上标标签 tip</h2>
+<div class="tabs" id="text"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#text-1">标签语法</button></li><li class="tab"><button type="button" data-href="#text-2">配置参数</button></li><li class="tab"><button type="button" data-href="#text-3">示例</button></li><li class="tab"><button type="button" data-href="#text-4">示例源码</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="text-1"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">{% tip [参数，可选] %}文本内容{% endtip %}</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-2"><ol type="1">
+<li>样式: success,error,warning,bolt,ban,home,sync,cogs,key,bell</li>
+<li>自定义图标: 支持fontawesome。</li>
+</ol><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-3"><div class="tip">
+<p>
+default
+</p>
+</div>
+<div class="tip info">
+<p>
+info
+</p>
+</div>
+<div class="tip success">
+<p>
+success
+</p>
+</div>
+<div class="tip error">
+<p>
+error
+</p>
+</div>
+<div class="tip warning">
+<p>
+warning
+</p>
+</div>
+<div class="tip bolt">
+<p>
+bolt
+</p>
+</div>
+<div class="tip ban">
+<p>
+ban
+</p>
+</div>
+<div class="tip home">
+<p>
+home
+</p>
+</div>
+<div class="tip sync">
+<p>
+sync
+</p>
+</div>
+<div class="tip cogs">
+<p>
+cogs
+</p>
+</div>
+<div class="tip key">
+<p>
+key
+</p>
+</div>
+<div class="tip bell">
+<p>
+bell
+</p>
+</div>
+<div class="tip fa-atom">
+<p>
+自定义font awesome图标
+</p>
+</div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-4"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">{% tip %}default{% endtip %}</span><br><span class="line">{% tip info %}info{% endtip %}</span><br><span class="line">{% tip success %}success{% endtip %}</span><br><span class="line">{% tip error %}error{% endtip %}</span><br><span class="line">{% tip warning %}warning{% endtip %}</span><br><span class="line">{% tip bolt %}bolt{% endtip %}</span><br><span class="line">{% tip ban %}ban{% endtip %}</span><br><span class="line">{% tip home %}home{% endtip %}</span><br><span class="line">{% tip sync %}sync{% endtip %}</span><br><span class="line">{% tip cogs %}cogs{% endtip %}</span><br><span class="line">{% tip key %}key{% endtip %}</span><br><span class="line">{% tip bell %}bell{% endtip %}</span><br><span class="line">{% tip fa-atom %}自定义font awesome图标{% endtip %}</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h2 id="动态标签-anima">动态标签 anima</h2>
+<div class="tabs" id="text"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#text-1">标签语法</button></li><li class="tab"><button type="button" data-href="#text-2">配置参数</button></li><li class="tab"><button type="button" data-href="#text-3">示例</button></li><li class="tab"><button type="button" data-href="#text-4">示例源码</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="text-1"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">{% tip [参数，可选] %}文本内容{% endtip %}</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-2"><p>详情请参看<a href="https://l-lin.github.io/font-awesome-animation/">font-awesome-animation文档</a></p>
+<ol type="1">
+<li><p>将所需的CSS类添加到图标（或DOM中的任何元素）。</p></li>
+<li><p>对于父级悬停样式，需要给目标元素添加指定CSS类，同时还要给目标元素的父级元素添加CSS类faa-parent animated-hover。（详情见示例及示例源码）。You can regulate the speed of the animation by adding the CSS class or . faa-fastfaa-slow</p></li>
+<li><p>可以通过给目标元素添加CSS类faa-fast或faa-slow来控制动画快慢。</p></li>
+</ol><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-3"><ol type="1">
+<li>On DOM load（当页面加载时显示动画）</li>
+</ol>
+<div class="tip warning faa-horizontal animated">
+<p>
+warning
+</p>
+</div>
+<div class="tip ban faa-flash animated">
+<p>
+ban
+</p>
+</div>
+<ol start="2" type="1">
+<li>调整动画速度</li>
+</ol>
+<div class="tip warning faa-horizontal animated faa-fast">
+<p>
+warning
+</p>
+</div>
+<div class="tip ban faa-flash animated faa-slow">
+<p>
+ban
+</p>
+</div>
+<ol start="3" type="1">
+<li>On hover（当鼠标悬停时显示动画）</li>
+</ol>
+<div class="tip warning faa-horizontal animated-hover">
+<p>
+warning
+</p>
+</div>
+<div class="tip ban faa-flash animated-hover">
+<p>
+ban
+</p>
+</div>
+<ol start="4" type="1">
+<li>On parent hover（当鼠标悬停在父级元素时显示动画）</li>
+</ol>
+<div class="tip warning faa-parent animated-hover">
+<p class="faa-horizontal">
+warning
+</p>
+</div>
+<div class="tip ban faa-parent animated-hover">
+<p class="faa-flash">
+ban
+</p>
+</div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-4"><ol type="1">
+<li>On DOM load（当页面加载时显示动画） <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">{% tip warning faa-horizontal animated %}warning{% endtip %}</span><br><span class="line">{% tip ban faa-flash animated %}ban{% endtip %}</span><br></pre></td></tr></table></figure></li>
+<li>调整动画速度 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">{% tip warning faa-horizontal animated faa-fast %}warning{% endtip %}</span><br><span class="line">{% tip ban faa-flash animated faa-slow %}ban{% endtip %}</span><br></pre></td></tr></table></figure></li>
+<li>On hover（当鼠标悬停时显示动画） <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">{% tip warning faa-horizontal animated-hover %}warning{% endtip %}</span><br><span class="line">{% tip ban faa-flash animated-hover %}ban{% endtip %}</span><br></pre></td></tr></table></figure></li>
+<li>On parent hover（当鼠标悬停在父级元素时显示动画） <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">{% tip warning faa-parent animated-hover %}<span class="language-xml"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"faa-horizontal"</span>&gt;</span></span>warning<span class="language-xml"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span>{% endtip %}</span><br><span class="line">{% tip ban faa-parent animated-hover %}<span class="language-xml"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"faa-flash"</span>&gt;</span></span>ban<span class="language-xml"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span>{% endtip %}</span><br></pre></td></tr></table></figure></li>
+</ol><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h2 id="链接卡片-link">链接卡片 link</h2>
+<div class="tabs" id="text"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#text-1">标签语法</button></li><li class="tab"><button type="button" data-href="#text-2">示例</button></li><li class="tab"><button type="button" data-href="#text-3">示例源码</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="text-1"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">{% link 标题, 链接, 图片链接（可选） %}</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-2"><div class="tag link">
+<a class="link-card" title="Jerの博客" href="https://blog.jersite.gq/">
+<div class="left">
+<img src="https://cdn.luogu.com.cn/upload/usericon/368723.png">
+</div>
+<div class="right">
+<p class="text">
+Jerの博客
+</p>
+<p class="url">
+https://blog.jersite.gq/
+</p>
+</div>
+</a>
+</div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-3"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">{% link Jerの博客, https://blog.jersite.gq/,  https://cdn.luogu.com.cn/upload/usericon/368723.png%}</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h2 id="网站卡片-sites">网站卡片 sites</h2>
+<div class="tabs" id="text"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#text-1">标签语法</button></li><li class="tab"><button type="button" data-href="#text-2">示例</button></li><li class="tab"><button type="button" data-href="#text-3">示例源码</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="text-1"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">{% sitegroup %}</span><br><span class="line">{% site 标题, url=链接, screenshot=截图链接, avatar=头像链接（可选）, description=描述（可选） %}</span><br><span class="line">{% site 标题, url=链接, screenshot=截图链接, avatar=头像链接（可选）, description=描述（可选） %}</span><br><span class="line">{% endsitegroup %}</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-2"><div class="site-card-group">
+<a class="site-card" href="https://xaoxuu.com">
+<div class="img">
+<img src="https://i.loli.net/2020/08/21/VuSwWZ1xAeUHEBC.jpg">
+</div>
+<div class="info">
+<img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png"><span class="title">xaoxuu</span><span class="desc">简约风格</span>
+</div>
+</a> <a class="site-card" href="https://inkss.cn">
+<div class="img">
+<img src="https://i.loli.net/2020/08/21/Vzbu3i8fXs6Nh5Y.jpg">
+</div>
+<div class="info">
+<img src="https://cdn.jsdelivr.net/gh/inkss/common@master/static/web/avatar.jpg"><span class="title">inkss</span><span class="desc">这是一段关于这个网站的描述文字</span>
+</div>
+</a> <a class="site-card" href="https://blog.mhuig.top">
+<div class="img">
+<img src="https://i.loli.net/2020/08/22/d24zpPlhLYWX6D1.png">
+</div>
+<div class="info">
+<img src="https://cdn.jsdelivr.net/gh/MHuiG/imgbed@master/data/p.png"><span class="title">MHuiG</span><span class="desc">这是一段关于这个网站的描述文字</span>
+</div>
+</a> <a class="site-card" href="https://colsrch.top">
+<div class="img">
+<img src="https://i.loli.net/2020/08/22/dFRWXm52OVu8qfK.png">
+</div>
+<div class="info">
+<img src="https://cdn.jsdelivr.net/gh/Colsrch/images/Colsrch/avatar.jpg"><span class="title">Colsrch</span><span class="desc">这是一段关于这个网站的描述文字</span>
+</div>
+</a> <a class="site-card" href="https://linhk1606.github.io">
+<div class="img">
+<img src="https://i.loli.net/2020/08/21/3PmGLCKicnfow1x.png">
+</div>
+<div class="info">
+<img src="https://i.loli.net/2020/02/09/PN7I5RJfFtA93r2.png"><span class="title">Linhk1606</span><span class="desc">这是一段关于这个网站的描述文字</span>
+</div>
+</a>
+</div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-3"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">{% sitegroup %}</span><br><span class="line">{% site xaoxuu, url=https://xaoxuu.com, screenshot=https://i.loli.net/2020/08/21/VuSwWZ1xAeUHEBC.jpg, avatar=https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png, description=简约风格 %}</span><br><span class="line">{% site inkss, url=https://inkss.cn, screenshot=https://i.loli.net/2020/08/21/Vzbu3i8fXs6Nh5Y.jpg, avatar=https://cdn.jsdelivr.net/gh/inkss/common@master/static/web/avatar.jpg, description=这是一段关于这个网站的描述文字 %}</span><br><span class="line">{% site MHuiG, url=https://blog.mhuig.top, screenshot=https://i.loli.net/2020/08/22/d24zpPlhLYWX6D1.png, avatar=https://cdn.jsdelivr.net/gh/MHuiG/imgbed@master/data/p.png, description=这是一段关于这个网站的描述文字 %}</span><br><span class="line">{% site Colsrch, url=https://colsrch.top, screenshot=https://i.loli.net/2020/08/22/dFRWXm52OVu8qfK.png, avatar=https://cdn.jsdelivr.net/gh/Colsrch/images/Colsrch/avatar.jpg, description=这是一段关于这个网站的描述文字 %}</span><br><span class="line">{% site Linhk1606, url=https://linhk1606.github.io, screenshot=https://i.loli.net/2020/08/21/3PmGLCKicnfow1x.png, avatar=https://i.loli.net/2020/02/09/PN7I5RJfFtA93r2.png, description=这是一段关于这个网站的描述文字 %}</span><br><span class="line">{% endsitegroup %}</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h2 id="视频-video">视频 video</h2>
+<div class="tabs" id="text"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#text-1">标签语法</button></li><li class="tab"><button type="button" data-href="#text-2">配置参数</button></li><li class="tab"><button type="button" data-href="#text-3">示例</button></li><li class="tab"><button type="button" data-href="#text-4">示例源码</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="text-1"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">{% video 视频链接 %}</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-2"><ol type="1">
+<li><p>对其方向：left, center, right</p></li>
+<li><p>列数：逗号后面直接写列数，支持 1 ～ 4 列。</p></li>
+</ol><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-3"><div class="video">
+<video controls="" preload="">
+<source src="https://www.bilibili.com/video/BV1f44y1L72U/" type="video/mp4">
+Your browser does not support the video tag.</video>
+</div>
+<div class="videos" col="2">
+<div class="video">
+<video controls="" preload="">
+<source src="https://www.bilibili.com/video/BV1J54y147Cu/" type="video/mp4">
+Your browser does not support the video tag.</video>
+</div>
+<div class="video">
+<video controls="" preload="">
+<source src="https://www.bilibili.com/video/BV1rt411B7DD/" type="video/mp4">
+Your browser does not support the video tag.</video>
+</div>
+</div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-4"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">{% video https://www.bilibili.com/video/BV1f44y1L72U/ %}</span><br><span class="line">{% videos, 2 %}</span><br><span class="line">{% video https://www.bilibili.com/video/BV1J54y147Cu/ %}</span><br><span class="line">{% video https://www.bilibili.com/video/BV1rt411B7DD/ %}</span><br><span class="line">{% endvideos %}</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h2 id="折叠框-folding">折叠框 folding</h2>
+<div class="tabs" id="text"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#text-1">标签语法</button></li><li class="tab"><button type="button" data-href="#text-2">配置参数</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="text-1"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">{% folding 参数（可选）, 标题 %}</span><br><span class="line"></span><br><span class="line"><span class="strong">**内容**</span></span><br><span class="line"></span><br><span class="line">{% endfolding %}</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-2"><ol type="1">
+<li><p>颜色：blue, cyan, green, yellow, red</p></li>
+<li><p>状态：状态填写 open 代表默认打开。</p></li>
+</ol><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h2 id="分栏-tab">分栏 tab</h2>
+<div class="tabs" id="text"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#text-1">标签语法</button></li><li class="tab"><button type="button" data-href="#text-2">配置参数</button></li><li class="tab"><button type="button" data-href="#text-3">示例</button></li><li class="tab"><button type="button" data-href="#text-4">示例源码</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="text-1"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">{% tabs Unique name, [index] %}</span><br><span class="line">&lt;!-- tab [Tab caption] [@icon] --&gt;</span><br><span class="line">Any content (support inline tags too).</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">{% endtabs %}</span><br><span class="line"></span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-2"><ol type="1">
+<li>Unique name :</li>
+</ol>
+<ul>
+<li><p>选项卡块标签的唯一名称，不带逗号。</p></li>
+<li><p>将在#id中用作每个标签及其索引号的前缀。</p></li>
+<li><p>如果名称中包含空格，则对于生成#id，所有空格将由破折号代替。</p></li>
+<li><p>仅当前帖子/页面的URL必须是唯一的！</p></li>
+</ul>
+<ol start="2" type="1">
+<li></li>
+</ol>
+<ul>
+<li><p>活动选项卡的索引号。</p></li>
+<li><p>如果未指定，将选择第一个标签（1）。</p></li>
+<li><p>如果index为-1，则不会选择任何选项卡。</p></li>
+<li><p>可选参数。</p></li>
+</ul>
+<ol start="3" type="1">
+<li>[Tab caption]:</li>
+</ol>
+<ul>
+<li><p>当前选项卡的标题。</p></li>
+<li><p>如果未指定标题，则带有制表符索引后缀的唯一名称将用作制表符的标题。</p></li>
+<li><p>如果未指定标题，但指定了图标，则标题将为空。</p></li>
+<li><p>可选参数。</p></li>
+</ul>
+<ol start="4" type="1">
+<li><span class="citation" data-cites="icon">[@icon]</span>:</li>
+</ol>
+<ul>
+<li><p>FontAwesome图标名称（全名，看起来像“ fas fa-font”）</p></li>
+<li><p>可以指定带空格或不带空格；</p></li>
+<li><p>例如’Tab caption <span class="citation" data-cites="icon">@icon</span>’ 和 ‘Tab caption@icon’.</p></li>
+<li><p>可选参数。</p></li>
+</ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-3"><div id="test1" class="tabs">
+<ul class="nav-tabs">
+<li class="tab active">
+<button type="button" data-href="#test1-1">
+test1 1
+</button>
+</li>
+<li class="tab">
+<button type="button" data-href="#test1-2">
+test1 2
+</button>
+</li>
+<li class="tab">
+<button type="button" data-href="#test1-3">
+test1 3
+</button>
+</li>
+</ul>
+<div class="tab-contents">
+<div id="test1-1" class="tab-item-content active">
+<p>
+<strong>This is Tab 1.</strong>
+</p>
+<button type="button" class="tab-to-top" aria-label="scroll to top">
+<i class="fas fa-arrow-up"></i>
+</button>
+</div>
+<div id="test1-2" class="tab-item-content">
+<p>
+<strong>This is Tab 2.</strong>
+</p>
+<button type="button" class="tab-to-top" aria-label="scroll to top">
+<i class="fas fa-arrow-up"></i>
+</button>
+</div>
+<div id="test1-3" class="tab-item-content">
+<p>
+<strong>This is Tab 3.</strong>
+</p>
+<button type="button" class="tab-to-top" aria-label="scroll to top">
+<i class="fas fa-arrow-up"></i>
+</button>
+</div>
+</div>
+</div>
+<div id="test2" class="tabs">
+<ul class="nav-tabs">
+<li class="tab active">
+<button type="button" data-href="#test2-1">
+第一个Tab
+</button>
+</li>
+<li class="tab">
+<button type="button" data-href="#test2-2">
+<i class="fab fa-apple-pay" style="text-align: center;"></i>
+</button>
+</li>
+<li class="tab">
+<button type="button" data-href="#test2-3">
+<i class="fas fa-bomb"></i>炸弹
+</button>
+</li>
+</ul>
+<div class="tab-contents">
+<div id="test2-1" class="tab-item-content active">
+<p>
+<strong>tab名字为第一个Tab</strong>
+</p>
+<button type="button" class="tab-to-top" aria-label="scroll to top">
+<i class="fas fa-arrow-up"></i>
+</button>
+</div>
+<div id="test2-2" class="tab-item-content">
+<p>
+<strong>只有图标 没有Tab名字</strong>
+</p>
+<button type="button" class="tab-to-top" aria-label="scroll to top">
+<i class="fas fa-arrow-up"></i>
+</button>
+</div>
+<div id="test2-3" class="tab-item-content">
+<p>
+<strong>名字+icon</strong>
+</p>
+<button type="button" class="tab-to-top" aria-label="scroll to top">
+<i class="fas fa-arrow-up"></i>
+</button>
+</div>
+</div>
+</div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-4"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">{% tabs test1 %}</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 1.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 2.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 3.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">{% endtabs %}</span><br><span class="line">{% tabs test2 %}</span><br><span class="line">&lt;!-- tab 第一个Tab --&gt;</span><br><span class="line"><span class="strong">**tab名字为第一个Tab**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab @fab fa-apple-pay --&gt;</span><br><span class="line"><span class="strong">**只有图标 没有Tab名字**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab 炸弹@fas fa-bomb --&gt;</span><br><span class="line"><span class="strong">**名字+icon**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">{% endtabs %}</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h2 id="诗词标签-poem">诗词标签 poem</h2>
+<div class="tabs" id="text"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#text-1">标签语法</button></li><li class="tab"><button type="button" data-href="#text-2">配置参数</button></li><li class="tab"><button type="button" data-href="#text-3">示例</button></li><li class="tab"><button type="button" data-href="#text-4">示例源码</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="text-1"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">{% poem [title],[author] %}</span><br><span class="line">诗词内容</span><br><span class="line">{% endpoem %}</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-2"><ol type="1">
+<li><p>title：诗词标题</p></li>
+<li><p>author：作者，可以不写</p></li>
+</ol><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-3"><div class="poem">
+<div class="poem-title">
+水调歌头
+</div>
+<div class="poem-author">
+苏轼
+</div>
+<p>
+丙辰中秋，欢饮达旦，大醉，作此篇，兼怀子由。 明月几时有？把酒问青天。 不知天上宫阙，今夕是何年？ 我欲乘风归去，又恐琼楼玉宇，高处不胜寒。 起舞弄清影，何似在人间？
+</p>
+<p>
+转朱阁，低绮户，照无眠。 不应有恨，何事长向别时圆？ 人有悲欢离合，月有阴晴圆缺，此事古难全。 但愿人长久，千里共婵娟。
+</p>
+</div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-4"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">{% poem 水调歌头,苏轼 %}</span><br><span class="line">丙辰中秋，欢饮达旦，大醉，作此篇，兼怀子由。</span><br><span class="line">明月几时有？把酒问青天。</span><br><span class="line">不知天上宫阙，今夕是何年？</span><br><span class="line">我欲乘风归去，又恐琼楼玉宇，高处不胜寒。</span><br><span class="line">起舞弄清影，何似在人间？</span><br><span class="line"></span><br><span class="line">转朱阁，低绮户，照无眠。</span><br><span class="line">不应有恨，何事长向别时圆？</span><br><span class="line">人有悲欢离合，月有阴晴圆缺，此事古难全。</span><br><span class="line">但愿人长久，千里共婵娟。</span><br><span class="line">{% endpoem %}</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h2 id="注释-notation">注释 notation</h2>
+<div class="tabs" id="text"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#text-1">标签语法</button></li><li class="tab"><button type="button" data-href="#text-2">配置参数</button></li><li class="tab"><button type="button" data-href="#text-3">示例</button></li><li class="tab"><button type="button" data-href="#text-4">示例源码</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="text-1"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">{% nota [label] , [text] %}</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-2"><p>label: 注释词汇</p>
+<p>text: 悬停显示的注解内容</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-3"><p><span class="nota" data-nota="可以看到注解内容出现在顶栏">把鼠标移动到我上面试试</span></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-4"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">{% nota 把鼠标移动到我上面试试 ,可以看到注解内容出现在顶栏 %}</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h2 id="气泡注释-bubble">气泡注释 bubble</h2>
+<div class="tabs" id="text"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#text-1">标签语法</button></li><li class="tab"><button type="button" data-href="#text-2">配置参数</button></li><li class="tab"><button type="button" data-href="#text-3">示例</button></li><li class="tab"><button type="button" data-href="#text-4">示例源码</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="text-1"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">{% bubble [content] , [notation] ,[background-color] %}</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-2"><p>content: 注释词汇</p>
+<p>notation: 悬停显示的注解内容</p>
+<p>background-color: 可选，气泡背景色。默认为“#71a4e3”</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-3"><p>最近我学到了不少新玩意儿（虽然对很多大佬来说这些已经是旧技术了），比如CSS的<span class="bubble-content">兄弟相邻选择器</span><span class="bubble-notation"><span class="bubble-item" style="background-color:#71a4e3;">例如 h1 + p {margin-top:50px;}</span></span>，<span class="bubble-content">flex布局</span><span class="bubble-notation"><span class="bubble-item" style="background-color:#ec5830;">Flex 是 Flexible Box 的缩写，意为弹性布局"，用来为盒状模型提供最大的灵活性"</span></span>，<span class="bubble-content">transform变换</span><span class="bubble-notation"><span class="bubble-item" style="background-color:#1db675;">transform 属性向元素应用 2D 或 3D 转换。该属性允许我们对元素进行旋转、缩放、移动或倾斜。</span></span>，animation的<span class="bubble-content">贝塞尔速度曲线</span><span class="bubble-notation"><span class="bubble-item" style="background-color:#de4489;">贝塞尔曲线(Bézier curve)，又称贝兹曲线或贝济埃曲线，是应用于二维图形应用程序的数学曲线。一般的矢量图形软件通过它来精确画出曲线，贝兹曲线由线段与节点组成，节点是可拖动的支点，线段像可伸缩的皮筋</span></span>写法，还有今天刚看到的<span class="bubble-content">clip-path</span><span class="bubble-notation"><span class="bubble-item" style="background-color:#868fd7;">clip-path属性使用裁剪方式创建元素的可显示区域。区域内的部分显示，区域外的隐藏。</span></span>属性。这些对我来说很新颖的概念狠狠的冲击着我以前积累起来的设计思路。</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-4"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">最近我学到了不少新玩意儿（虽然对很多大佬来说这些已经是旧技术了），比如CSS的{% bubble 兄弟相邻选择器,"例如 h1 + p {margin-top:50px;}" %}，{% bubble flex布局,"Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型提供最大的灵活性","#ec5830" %}，{% bubble transform变换,"transform 属性向元素应用 2D 或 3D 转换。该属性允许我们对元素进行旋转、缩放、移动或倾斜。","#1db675" %}，animation的{% bubble 贝塞尔速度曲线,"贝塞尔曲线(Bézier curve)，又称贝兹曲线或贝济埃曲线，是应用于二维图形应用程序的数学曲线。一般的矢量图形软件通过它来精确画出曲线，贝兹曲线由线段与节点组成，节点是可拖动的支点，线段像可伸缩的皮筋","#de4489" %}写法，还有今天刚看到的{% bubble clip-path,"clip-path属性使用裁剪方式创建元素的可显示区域。区域内的部分显示，区域外的隐藏。","#868fd7" %}属性。这些对我来说很新颖的概念狠狠的冲击着我以前积累起来的设计思路。</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h2 id="旋转相册-carousel">旋转相册 carousel</h2>
+<div class="tabs" id="text"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#text-1">标签语法</button></li><li class="tab"><button type="button" data-href="#text-2">配置参数</button></li><li class="tab"><button type="button" data-href="#text-3">示例</button></li><li class="tab"><button type="button" data-href="#text-4">示例源码</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="text-1"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">{% carousel [Id] , [name] %}</span><br><span class="line">![](<span class="link">/img/1.jpg</span>)</span><br><span class="line">![](<span class="link">/img/2.jpg</span>)</span><br><span class="line">![](<span class="link">/img/3,jpg</span>)</span><br><span class="line">{% endcarousel %}</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-2"><p>Id: 相册唯一ID，用于监测相册鼠标动作。禁止使用中文。同一页内不得出现相同ID的carousel相册。</p>
+<p>name: 相册中间显示的内容，建议用英文单引号包裹。</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-3"><div id="SF" class="carousel">
+<div id="SF-drag-container" class="drag-container">
+<div id="SF-spin-container" class="spin-container">
+<img src="https://img.paulzzh.tech/touhou/random"> <img src="https://img.paulzzh.tech/touhou/random"> <img src="https://img.paulzzh.tech/touhou/random"> <img src="https://img.paulzzh.tech/touhou/random"> <img src="https://img.paulzzh.tech/touhou/random"> <img src="https://img.paulzzh.tech/touhou/random">
+<p>
+strike freedom
+</p>
+</div>
+<div id="SF-carousel-ground" class="carousel-ground">
+
+</div>
+</div>
+</div>
+<script type="text/javascript">carouselinit('SF');</script><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="text-4"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">{% carousel 'SF','strike freedom' %}</span><br><span class="line">![](<span class="link">https://img.paulzzh.tech/touhou/random</span>)</span><br><span class="line">![](<span class="link">https://img.paulzzh.tech/touhou/random</span>)</span><br><span class="line">![](<span class="link">https://img.paulzzh.tech/touhou/random</span>)</span><br><span class="line">![](<span class="link">https://img.paulzzh.tech/touhou/random</span>)</span><br><span class="line">![](<span class="link">https://img.paulzzh.tech/touhou/random</span>)</span><br><span class="line">![](<span class="link">https://img.paulzzh.tech/touhou/random</span>)</span><br><span class="line">{% endcarousel %}</span><br></pre></td></tr></table></figure><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+]]></content>
+      <categories>
+        <category>魔改</category>
+      </categories>
+      <tags>
+        <tag>魔改</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>线性数据结构</title>
     <url>/post/e2dcdda5.html</url>
     <content><![CDATA[<h1 id="线性数据结构">线性数据结构</h1>
@@ -953,6 +1409,12 @@
       <tags>
         <tag>数据结构</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>给hexo添加一个后台</title>
+    <url>/post/dce938d9.html</url>
+    <content><![CDATA[
+]]></content>
   </entry>
   <entry>
     <title>背包笔记</title>
