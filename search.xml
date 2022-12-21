@@ -274,8 +274,23 @@
   <entry>
     <title>使用Google搜索新方式</title>
     <url>/post/f92da8a5.html</url>
-    <content><![CDATA[
+    <content><![CDATA[<p>众所周知Google需要魔法，今天分享一个自己电脑不用魔法就能使用谷歌搜索的方法。</p>
+<p>所用到的Github项目如下<div class="tag link"><a class="link-card" title="Google" href="https://github.com/gaowanlu/google"><div class="left"><img src="https://f004.backblazeb2.com/file/jerspicture/Qexo/2022/12/e0d63763a66552c9319355b6a1102995.webp"></div><div class="right"><p class="text">Google</p><p class="url">https://github.com/gaowanlu/google</p></div></a></div></p>
+<h2 id="方法">方法：</h2>
+<ol type="1">
+<li><p>Fork 这个仓库</p></li>
+<li><p>登录 <a href="https://vercel.com/">vercel</a></p></li>
+<li><p>将你的Github账号关联到Vercel</p></li>
+<li><p>新建一个项目<img src="https://f004.backblazeb2.com/file/jerspicture/Qexo/2022/12/f4895097c96d6436191cd2043d5f18b9.png"></p></li>
+<li><p>选择你所Fork的仓库<img src="https://f004.backblazeb2.com/file/jerspicture/Qexo/2022/12/f6fe8e991182b805d78d05f8d1ba327e.png"></p></li>
+<li><p>等待部署完成。</p></li>
+<li><p>众所周知*.vercel.app的DNS被污染了需要自行绑定域名<img src="https://f004.backblazeb2.com/file/jerspicture/Qexo/2022/12/c681eb38f98c869bcfb15bf84eb6bac3.png"></p></li>
+</ol>
+<div class="tag link"><a class="link-card" title="示例" href="https://google.jerweb.gq"><div class="left"><img src="https://pic.imgdb.cn/item/63a24ba0b1fccdcd36d63213.png"></div><div class="right"><p class="text">示例</p><p class="url">https://google.jerweb.gq</p></div></a></div>
 ]]></content>
+      <tags>
+        <tag>教程</tag>
+      </tags>
   </entry>
   <entry>
     <title>压缩储存</title>
