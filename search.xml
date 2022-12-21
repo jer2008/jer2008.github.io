@@ -55,6 +55,50 @@
       </tags>
   </entry>
   <entry>
+    <title>Algolia在线搜索使用</title>
+    <url>/post/3cafefd4.html</url>
+    <content><![CDATA[<p>最近不知道为什么local_search挂了</p>
+<figure>
+<img src="https://f004.backblazeb2.com/file/jerspicture/Qexo/2022/12/d3d2c4004c6e9d6ddcfc3d29fe28b3b9.png" alt="https://f004.backblazeb2.com/file/jerspicture/Qexo/2022/12/d3d2c4004c6e9d6ddcfc3d29fe28b3b9.png"><figcaption aria-hidden="true">https://f004.backblazeb2.com/file/jerspicture/Qexo/2022/12/d3d2c4004c6e9d6ddcfc3d29fe28b3b9.png</figcaption>
+</figure>
+<p>没办法修复，而且仔细一看search.xml文件已经超过2M，而我博客才刚刚开头，只好换成algolia。</p>
+<h2 id="插件选择">插件选择</h2>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-algolia --save</span><br><span class="line">npm install hexo-algoliasearch --save</span><br></pre></td></tr></table></figure>
+<p>分别是 hexo-algolia 和 hexo-algoliasearch，他们的介绍分别为</p>
+<blockquote>
+<p>Index your hexo website content to Algolia Search.</p>
+<p>🔎 A plugin to index posts of your Hexo blog on Algolia</p>
+</blockquote>
+<p>本教程选用hexo-algoliasearch</p>
+<h2 id="安装">安装</h2>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-algoliasearch --save</span><br></pre></td></tr></table></figure>
+<p>去主题配置文件打开 Algolia 搜索，记得关闭本地搜索，二者只能取其一。</p>
+<p>编辑_config.butterfly.yml :</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Algolia search</span></span><br><span class="line"><span class="attr">algolia_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">hits:</span></span><br><span class="line">    <span class="attr">per_page:</span> <span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Local search</span></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h2 id="配置">配置</h2>
+<p>前往 Algolia 官网注册一个账号，新建 应用和index</p>
+<p>获取appId，apiKey，adminApiKey，记住三个变量。</p>
+<p>在_config.yml中添加</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">algolia:</span></span><br><span class="line">  <span class="attr">appId:</span> <span class="string">"你的appId"</span></span><br><span class="line">  <span class="attr">apiKey:</span> <span class="string">"你的apiKey"</span></span><br><span class="line">  <span class="attr">adminApiKey:</span> <span class="string">"你的adminApiKey"</span></span><br><span class="line">  <span class="attr">indexName:</span> <span class="string">"你说要引用的名字如：Hexo"</span></span><br><span class="line">  <span class="attr">chunkSize:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">fields:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">path</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">title</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">content:strip</span></span><br></pre></td></tr></table></figure>
+<h2 id="使用">使用</h2>
+<p>下面介绍两种上传搜索资料的方法</p>
+<h3 id="本地">本地</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo algolia</span><br><span class="line">而在这之前还需要hexo g生成文件</span><br><span class="line">所以具体使用命令就是</span><br><span class="line">hexo cl &amp;&amp; hexo g &amp;&amp; hexo algolia</span><br><span class="line">或者在未安装 HEXO CLI 的情况下使用以下命令</span><br><span class="line">npm run clean &amp;&amp; npm run build &amp;&amp; hexo algolia -n</span><br></pre></td></tr></table></figure>
+<h3 id="github-action">Github Action</h3>
+<p>前提是你已经配置好博客源文件的Github Action</p>
+<p>在BlogRoot\.github.yml中生成静态文件命令中最后一行添加</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo algolia --no-clear</span><br></pre></td></tr></table></figure>
+<p>到这里恭喜你完成Algolia的配置。</p>
+<p>有疑问可以评论</p>
+]]></content>
+      <categories>
+        <category>魔改</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hash表</title>
     <url>/post/a1205a06.html</url>
     <content><![CDATA[<h1 id="散列hash表">散列（Hash）表</h1>
