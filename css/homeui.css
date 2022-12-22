@@ -1,5 +1,9 @@
 .layout{
-  max-width:1300px;
+  max-width:1400px;
+}
+
+.page .layout{
+    max-width:1400px!important;
 }
 #archive,#page,#category,#tag{
     width:100%;
