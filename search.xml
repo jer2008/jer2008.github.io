@@ -248,6 +248,35 @@
       </tags>
   </entry>
   <entry>
+    <title>PDF插入博客</title>
+    <url>/post/9e46e325.html</url>
+    <content><![CDATA[<h2 id="安装hexo-pdf">安装hexo-pdf</h2>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-pdf</span><br></pre></td></tr></table></figure>
+<h2 id="本地pdf引用">本地PDF引用</h2>
+<p>最简单的引用方法：把相应pdf文件存到<strong>source文件夹</strong>下，引用格式为：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">{% pdf /引用文档名字.pdf %}</span><br></pre></td></tr></table></figure>
+<p><strong>也就是说，方法为：</strong></p>
+<p>在source文件夹下创建一个叫pdf的文件夹，把xxx.pdf文件放在这里，然后在_post文件夹中的xxx.md直接使用</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">{% pdf /pdf/xxx.pdf %}</span><br></pre></td></tr></table></figure>
+<p>尝试后可以看到，hexo-pdf对PDF文档展示效果非常不错。</p>
+]]></content>
+      <tags>
+        <tag>魔改</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>USACO银组T1题解</title>
+    <url>/post/c22068de.html</url>
+    <content><![CDATA[<p>咕咕咕</p>
+]]></content>
+      <categories>
+        <category>做题笔记</category>
+      </categories>
+      <tags>
+        <tag>做题笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>chen_zhe美文</title>
     <url>/post/602efba8.html</url>
     <content><![CDATA[<h2 id="chen_zhe先生">chen_zhe先生</h2>
