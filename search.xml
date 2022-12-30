@@ -804,10 +804,10 @@
 <p>​ <a href="http://life.chacuo.net/convertphoto2char">图片2</a></p>
 ]]></content>
       <categories>
-        <category>魔改</category>
+        <category>Hexo魔改</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
+        <tag>Hexo魔改</tag>
       </tags>
   </entry>
   <entry>
@@ -1480,6 +1480,9 @@ strike freedom
     <url>/post/d56782e6.html</url>
     <content><![CDATA[
 ]]></content>
+      <tags>
+        <tag>白嫖</tag>
+      </tags>
   </entry>
   <entry>
     <title>线性数据结构</title>
