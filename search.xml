@@ -170,6 +170,7 @@
     <content><![CDATA[<h2 id="一环境准备">一，环境准备</h2>
 <blockquote>
 <p>搭建之前需要准备的软件： Git：官网下载：<a href="https://git-scm.com/">git-scm.com</a> Node.js 官网下载：<a href="http://nodejs.cn/">nodejs.cn</a></p>
+<p>要是慢的话可以使用我分享的文件<a href="https://cloud.jersite.gq/s/aVcK?path=%2F">这里</a>不保证是最新的。</p>
 </blockquote>
 <p>检查：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm</span><br><span class="line">git -v</span><br></pre></td></tr></table></figure>
@@ -1478,7 +1479,11 @@ strike freedom
   <entry>
     <title>白嫖Replit指北</title>
     <url>/post/d56782e6.html</url>
-    <content><![CDATA[
+    <content><![CDATA[<h1 id="图片浏览">图片浏览</h1>
+<p><img src="https://image.jersite.gq/imgs/2023/01/a4ac58f72059bb37.png"></p>
+<p><img src="https://image.jersite.gq/imgs/2023/01/e2b61fdf9821a9da.png"></p>
+<h1 id="介绍">介绍</h1>
+<p>服务</p>
 ]]></content>
       <tags>
         <tag>白嫖</tag>
