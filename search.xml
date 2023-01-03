@@ -1545,6 +1545,10 @@ strike freedom
 <p>将以下代码粘贴至Replit Shell后回车</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/valetzx/cloudreveonreplit &amp;&amp; <span class="built_in">mv</span> -b cloudreveonreplit/* ./ &amp;&amp; <span class="built_in">mv</span> -b cloudreveonreplit/.[^.]* ./ &amp;&amp; <span class="built_in">rm</span> -rf *~ &amp;&amp; <span class="built_in">rm</span> -rf cloudreveonreplit</span><br></pre></td></tr></table></figure>
 <p>当加载完 Loading Nix environment... 后点击绿色的Run</p>
+<h4 id="demo">Demo</h4>
+<p><a href="https://cloud.jersite.gq/">我搭建的Cloudreve</a></p>
+<p>有需要的可以注册并私信或评论（附账号名）获得100GB的存储空间。（注册邮件发送可能会有一两分钟延迟）</p>
+<p><strong>Attention</strong>存储均放在Office E5开发者中不保证数据安全和永久保存，请备份重要数据，请勿上传违法文件</p>
 <h3 id="imgurl">imgurl</h3>
 <p>用于建自己的图床</p>
 <p><a href="https://www.imgurl.org/">ImgURL免费图床</a></p>
