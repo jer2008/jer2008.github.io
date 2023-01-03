@@ -1477,13 +1477,101 @@ strike freedom
       </tags>
   </entry>
   <entry>
+    <title>用Colab免费部署自己的AI绘画云平台-- Stable Diffusion</title>
+    <url>/post/908a970e.html</url>
+    <content><![CDATA[<p>看到chen_zhe的<a href="https://www.luogu.com.cn/blog/chen-zhe/luo-gu-niang">博客</a>才了解到最近AI绘画又热了起来。于是有了这一篇博客。</p>
+<p>其实我电脑还是能带AI绘画的毕竟是GTX1660ti有9G显存~，不过电脑存储空间不愿花掉10+GB跑，才选择网上亲爱的Google在线笔记本电脑跑。</p>
+<blockquote>
+<p>AI绘画门槛又又又降低了，从最开始需要花半天时间折腾的 Disco-Diffusion ，紧接着 <strong>Stable Diffusion</strong> 在 github 上开源，各家平台都推出了云平台，让用户通过轻松的点击、选择、输入就能生成一张张AI图。</p>
+<p>再到现在！！！使用 webui 在 github 上开源了，不仅有手动教程、docker 教程，还有 Colab 的集成方案。</p>
+<p>webui github 地址：<a href="https://github.com/sd-webui/stable-diffusion-webui">webui</a></p>
+</blockquote>
+<h2 id="注意事项">注意事项</h2>
+<blockquote>
+<p>博主一直用的是特殊网络环境，部分人可能会有问题（包括但不仅限于网页加载不了）</p>
+</blockquote>
+<h2 id="平台搭建">平台搭建</h2>
+<h3 id="打开链接">打开链接</h3>
+<p><a href="https://colab.research.google.com/github/altryne/sd-webui-colab/blob/main/Stable_Diffusion_WebUi_Altryne.ipynb"><img src="https://image.jersite.gq/imgs/2023/01/0701323b1ef7e747.png"></a></p>
+<h2 id="连接">连接</h2>
+<p><img src="https://image.jersite.gq/imgs/2023/01/6e515219bc600fac.png"></p>
+<p><img src="https://image.jersite.gq/imgs/2023/01/355956daaa8e5eba.png"></p>
+<p><strong>等连接上后我们运行第一段脚本，就是查看当前使用的机器。一般是从 K80、T4、P100、V100 中随机分配一个。</strong></p>
+<h2 id="设置-token">设置 Token</h2>
+<p>点击这个 <strong>1 - Setup stage</strong> 左边的小箭头进行展开，在<strong>1.4 Connect to Google Drive</strong>按要求获取<strong>Token</strong>并设置，记住要勾选✔</p>
+<p><img src="https://image.jersite.gq/imgs/2023/01/eb58e18bca5ae381.png"></p>
+<p>勾选 download_if_missing ，然后到 https://huggingface.co/settings/tokens 复制你的 toekn 并填入</p>
+<h2 id="设置密码">设置密码</h2>
+<p>划到 <strong>2 - Run the Stable Diffusion webui</strong> 部分，因为要部署一个服务，当然得设置一个密码，不然人人都可以随意使用你的服务了。</p>
+<p><img src="https://image.jersite.gq/imgs/2023/01/44240c37f9dfbc02.png"></p>
+<h2 id="运行服务">运行服务</h2>
+<p>将他们收起来，依次运行三个步骤</p>
+<h2 id="打开-web-服务">打开 Web 服务</h2>
+<p>账号为 webui，密码如果设置了就是你设置的密码。</p>
+<p>地址在运行中输出的Log中会有。</p>
+<h2 id="写在最后">写在最后</h2>
+<p>这里需要注意的是，不知道是不是我电脑的分辨率问题，默认宽高为 512 和 256，这个时候会报以下错误，但是将宽度调整成适应自己电脑的就没有问题。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">RuntimeError: The size of tensor a (128) must match the size of tensor b (32) at non-singleton dimension 3</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>白嫖Replit指北</title>
     <url>/post/d56782e6.html</url>
-    <content><![CDATA[<h1 id="图片浏览">图片浏览</h1>
+    <content><![CDATA[<h2 id="图片浏览">图片浏览</h2>
 <p><img src="https://image.jersite.gq/imgs/2023/01/a4ac58f72059bb37.png"></p>
 <p><img src="https://image.jersite.gq/imgs/2023/01/e2b61fdf9821a9da.png"></p>
-<h1 id="介绍">介绍</h1>
-<p>服务</p>
+<h2 id="介绍">介绍</h2>
+<p>服务还挺好，平均每16个项目平分谷歌云的8核64G的服务器，实际上分配给你的存储空间只有1GB。</p>
+<p><img src="https://image.jersite.gq/imgs/2023/01/82d17e465f7d6303.png"></p>
+<h2 id="可搭载项目">可搭载项目</h2>
+<h3 id="魔法">魔法</h3>
+<p>仅提供相关链接</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">https://replit.com/@hifeng/v2rayN</span><br><span class="line">https://replit.com/@sos801107/trojan</span><br><span class="line">https://replit.com/@oracleservice/V2RAY?v=1</span><br></pre></td></tr></table></figure>
+<h3 id="alist">Alist</h3>
+<p><a href="https://repl.it/github/alist-org/alist-replit"><img src="https://camo.githubusercontent.com/5b5316dd014ebbf028c608ff43c6530250b667bea92cdcf87ab231ce583437cc/68747470733a2f2f7265706c2e69742f62616467652f6769746875622f616c6973742d6f72672f616c6973742d7265706c6974"></a></p>
+<p><a href="https://github.com/alist-org/alist-replit">Github地址</a></p>
+<h3 id="cloudreve">Cloudreve</h3>
+<p><a href="https://github.com/valetzx/cloudreveonreplit">Github地址</a></p>
+<p>自动在Replit运行Cloudreve</p>
+<h4 id="rplit个人版">Rplit个人版：</h4>
+<p><a href="https://repl.it/github/valetzx/cloudreveonreplit"><img src="https://camo.githubusercontent.com/5b5316dd014ebbf028c608ff43c6530250b667bea92cdcf87ab231ce583437cc/68747470733a2f2f7265706c2e69742f62616467652f6769746875622f616c6973742d6f72672f616c6973742d7265706c6974"></a></p>
+<h4 id="rplit教育版">Rplit教育版：</h4>
+<p>将以下代码粘贴至Replit Shell后回车</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/valetzx/cloudreveonreplit &amp;&amp; <span class="built_in">mv</span> -b cloudreveonreplit/* ./ &amp;&amp; <span class="built_in">mv</span> -b cloudreveonreplit/.[^.]* ./ &amp;&amp; <span class="built_in">rm</span> -rf *~ &amp;&amp; <span class="built_in">rm</span> -rf cloudreveonreplit</span><br></pre></td></tr></table></figure>
+<p>当加载完 Loading Nix environment... 后点击绿色的Run</p>
+<h3 id="imgurl">imgurl</h3>
+<p>用于建自己的图床</p>
+<p><a href="https://www.imgurl.org/">ImgURL免费图床</a></p>
+<p>自行研究如何运行。如有问题可在评论区提出。</p>
+<p><a href="https://github.com/Yrwr/freeimg">Yrwr/freeimg: 该免费图床是一款简单、纯粹的图床程序。 (github.com)</a></p>
+<p>Demo: <a href="https://image.jersite.gq/">Jerの图床 (jersite.gq)</a></p>
+<h3 id="网站监测">网站监测</h3>
+<p><a href="https://github.com/louislam/uptime-kuma">Uptime Kuma</a></p>
+<p>用于网站监测。</p>
+<h3 id="动态博客">动态博客</h3>
+<p>如typecho博客，wordpress等。可能体验会比较差（速度慢，未经过仔细研究）。</p>
+<h3 id="在线匿名聊天室">在线匿名聊天室</h3>
+<p><a href="https://github.com/journey-ad/chat-room">Github地址</a></p>
+<h2 id="保持replit项目常开">保持Replit项目常开</h2>
+<p>利用<a href="https://github.com/louislam/uptime-kuma">Uptime Kuma</a>搭建两个网站监测，让他们互相Ping对方，大概率不会同时休眠。再让他们监测其它项目即可。</p>
+<h2 id="replit教育团队">Replit教育团队</h2>
+<p>在Teams中创建即可。</p>
+<p>教育团队有如下好处。</p>
+<ol type="1">
+<li>可以使项目私有，防止数据被盗。</li>
+<li>获得更好的运行空间，RAM为2GB，CPU为两核官方说的。</li>
+</ol>
+<p><img src="https://image.jersite.gq/imgs/2023/01/34579267afe6b473.png"></p>
+<h2 id="写在最后">写在最后</h2>
+<blockquote>
+<p>白嫖还是适可而止，据说没有流量，构建时间限制，官网也没给只说了空间和运行效率限制。 有问题可以在评论区问欧。</p>
+</blockquote>
 ]]></content>
       <tags>
         <tag>白嫖</tag>
